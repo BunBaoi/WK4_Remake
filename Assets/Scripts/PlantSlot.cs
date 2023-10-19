@@ -29,12 +29,10 @@ public class PlantSlot : MonoBehaviour
     {
         if(gms.suns >= price && !gms.currentPlant)
         {
-            gms.suns -= price;
             gms.BuyPlant(plantObject, plantSprite);
+            gms.suns -= price;
+            
         }
-
-
-        gms.BuyPlant(plantObject, plantSprite);
 
     }
 
