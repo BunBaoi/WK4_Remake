@@ -12,4 +12,10 @@ public class Zombie : MonoBehaviour
     {
         transform.position -= new Vector3(speed, 0, 0);
     }
+    public void Hit(int damge)
+    {
+        health -= damge;
+        if (health <= 0)
+            Destroy(gameObject);
+    }
 }
